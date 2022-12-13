@@ -1,0 +1,49 @@
+@import url(bootstrap.css);             /*Bootstrap base CSS*/
+@import url(font-awesome.css);         /*font-awesome.css*/
+@import url(style.css);          	   /*template style*/
+@import url(prettify.css);
+
+body{
+	font-size: 16px;
+}
+
+#back-top {
+	position: fixed;
+	bottom: 30px;
+	margin-left: -150px;
+
+
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	border: 1px solid #dc971f;
+	background-color: transparent;
+	clear: both;
+	-webkit-transition: all .25s ease;
+	-moz-transition: all .25s ease;
+	-ms-transition: all .25s ease;
+	-o-transition: all .25s ease;
+	transition: all .25s ease;
+}
+
+#back-top a{
+	display: block;
+	width: 49px;
+	height: 45px;
+	text-align: center;
+	line-height: 45px;
+}
+
+pre{
+	margin-bottom: 40px;
+}
+
+h2{
+	margin-top:80px;
+}
+h3{
+	font-size: 22px;
+}
+p{
+	margin-bottom: 15px;
+}

@@ -1,0 +1,22 @@
+{
+  "name": "toranj-html",
+  "version": "2.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages -d Template"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/owwwlab/toranj-html-template.git"
+  },
+  "author": "Alireza Jahandideh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/owwwlab/toranj-html-template/issues"
+  },
+  "homepage": "https://github.com/owwwlab/toranj-html-template#readme",
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
+  }
+}

@@ -1,0 +1,2024 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Documentation V.2.1</title>
+
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,300,800,700,600' rel='stylesheet' type='text/css'>
+
+        <!-- CSS styles -->
+        <link rel="stylesheet" href="css/base.css">
+      	<!-- /CSS styles -->
+    </head>
+    <body onload="prettyPrint()">
+		<div id="main-content"> 
+			<div class="page-wrapper regular-page">
+				<div class="container">
+
+					<div class="row">
+						
+						<!-- sidebar menu -->
+						<div class="col-md-3">
+							<p>&nbsp;</p>
+							<p><strong>Navigation</strong></p>
+							<ul class="list-unstyled">
+							    <li><a href="#intro">Introduction</a></li>
+							    <li><a href="#layouts">Layouts</a></li>
+							    <li><a href="#shortcode">Shortcodes</a></li>
+							    <!-- <li><a href="#plugins">jQuery Plugins</a></li> -->
+							    <li><a href="#howto">HOW TOs</a></li>
+							    <li><a href="#externals">External libraries</a></li>
+							    <li><a href="#credits">Credits</a></li>
+							    <li><a href="#update">updates</a></li>
+							</ul>
+
+						</div>
+						<!-- End sidebar menu -->
+
+						<!-- contents -->
+						<div class="col-md-9">
+							
+							<!-- introduction -->
+							<div class="row mb-xlarge" id="intro">
+								<!-- title -->
+								<h2 class="section-title double-title">
+									<span>Introduction to</span>Toranj HTML template
+								</h2>
+
+								<!-- intor -->
+								<div class="intro">
+									<p>We want to thank you for being interested to our work and purchasing the product, it is a great pleasure for us.</p>
+									<p>In this documentation file we will review features of the theme and important issues about various aspects of the theme.</p>
+								</div>
+
+								<!-- table of contents -->
+								<div class="contents">
+									<h2 class="lined">Contents</h2>
+									<ul class="list-border list-iconed list-hover">
+									    <li><a href="#int-1"><i class="fa fa-arrow-right"></i>Whom is this for?</a></li>
+									    <li><a href="#int-2"><i class="fa fa-arrow-right"></i>How to use this documentation?</a></li>
+									    <li><a href="#int-3"><i class="fa fa-arrow-right"></i>How to get support?</a></li>
+									    <li><a href="#int-4"><i class="fa fa-arrow-right"></i>How to update?</a></li>
+									    <li><a href="#int-5"><i class="fa fa-arrow-right"></i>How to install?</a></li>
+									</ul>
+								</div>
+
+								<div id="int-1">
+									<h2 class="lined">Whom is this for?</h2>
+									<p>This file is for who has purchased the theme from Themeforest marketplace and wants to get familiar with the features of the theme. Normally HTML templates like the current item is used by other developers who want to integrate it with their own software or CMS, but there are always novice people who want to use this as their own website. Reading this documentation needs intermediate knowledge of HTML and CSS. You should be able to read and understand HTML files and follow the CSS files to get the idea of how things work and how to customize them.</p>
+								</div>
+
+								<div id="int-2">
+									<h2 class="lined">How to use this documentation?</h2>
+									<p>Anyone can use this page as a reference to find features and sample codes of the templates. Also there is a HOW TO section that you can find frequently asked questions.</p>
+									<p>Please note that you should read the HTML code to fully understand the code, but having this page as a guide will be useful for you, so please don't rely on this page if you want to fully understand how things work.</p>
+
+								</div>
+
+								<div id="int-3">
+									<h2 class="lined">How to get support?</h2>
+									<p>If you found yourself in a situation that you needed more advanced explanations or any other concept which is beyond this documentation file, don't hesitate to contact our support staff by sending an email to <a href="mailto:owwwlab@gmail.com">owwwlab@gmail.com</a></p>
+								</div>
+								
+								<div id="int-4">
+									<h2 class="lined">How to update?</h2>
+									<p>We release updates free of charge, they will regularly be some bug fixes, but you should read the changes and implement them to your code manually. Updates will be released within Themeforest and you can be notified by following us at twitter @owwwlab</p>
+								</div>
+								
+								<div id="int-5">
+									<h2 class="lined">How to install?</h2>
+									<p>The theme uses Ajax and some PHP code. So you will need a web server to be able to test and edit. We recommend using a local web server like WAMPP or XAMPP.</p>
+								</div>
+
+								
+							</div>
+							<!-- End introduction -->
+
+
+							<!-- layouts -->
+							<div class="row mb-xlarge" id="layouts">
+								<h2 class="section-title double-title">
+									<span>Theme</span>Layouts
+								</h2>
+
+								<!-- intro -->
+								<div class="intro">
+									<p>We will discuss various layouts of the pages that you can build with this theme. There are some details that you should be careful about them so please read this section carefully.</p>
+								</div>
+
+								<!-- table of contents -->
+								<div class="contents">
+									<h2 class="lined">Contents</h2>
+									<ul class="list-border list-iconed list-hover">
+									    <li><a href="#con-basics"><i class="fa fa-arrow-right"></i>Basics</a></li>
+									    <li><a href="#con-regular"><i class="fa fa-arrow-right"></i>Regular Pages</a></li>
+									    <li><a href="#con-port"><i class="fa fa-arrow-right"></i>Portfolio pages</a></li>
+									    <li><a href="#con-gal"><i class="fa fa-arrow-right"></i>Gallery pages</a></li>
+									    <li><a href="#con-blog"><i class="fa fa-arrow-right"></i>Blog Pages</a></li>
+									</ul>
+								</div>
+
+								<div id="con-basics">
+									<h2 class="lined">Basics</h2>
+									<p>
+									Each page follows the structure of a regular HTML page with regular tags we will not discuss <code>HEAD</code> tag here, let's jump into the <code>body</code> tag and see what you should consider here.</p>
+									<p>
+										You can find this pattern of the code at <code>BODY</code> of any pages of the theme:
+									</p>
+									<pre>
+<a href="#" id="menu-toggle-wrapper">
+	<div id="menu-toggle"></div>	
+</a>
+
+<!-- inner bar wrapper -->
+<a href="#" id="inner-bar">
+	<!-- Small logo -->
+	<div class="logo-alt">
+		<img src="../assets/img/logo-mini.png" alt="logo-mini">
+	</div>
+	<!-- /Small logo -->
+</a>
+<!-- /inner bar wrapper -->
+
+<div id="side-bar">
+	<!-- contents of the menu sidebar -->
+</div>
+<div id="main-content">
+	<!-- contents of the page -->
+</div>
+									</pre>
+									<p>
+										The contents of the <code>#sidebar</code> is the same for all the pages and layouts, but the mark-up inside the <code>#main-content</code> will make the changes of pages.
+									</p>
+
+									<h3 class="bordered">Sidebar menu structure</h3>
+									<p>Here is the main structure of the sidebar:</p>
+									<pre>
+<div id="side-bar">
+	<div class="inner-wrapper">	
+		<div id="side-inner">
+			<!-- the arrow to collapse the menu -->
+			<a id="side-collapse" href="#"><i class="fa fa-long-arrow-left"></i></a>
+			<!-- logo section -->
+			<div id="logo-wrapper">
+				<a href="link to home"><img src="logo image address" alt="logo"></a>
+			</div>
+			<!-- contents of the sidebar i.e. navigation menu -->
+			<div id="side-contents">. . . </div>
+		</div>
+	</div>
+	<!-- sibebar footer -->
+	<div id="side-footer">. . . </div>
+	<!-- this will be shown when the menu is closed -->
+	<a href="#" id="menu-icon">
+		<div class="logo-alt"><img src="img/logo.png" alt="logo"></div>
+		<i class="fa fa-bars"></i>
+	</a>
+</div>
+									</pre>
+									<p>The code is pretty much self explaining but you should notice the presence of the hyper-link at line 17. As you may have noticed by default there is a vertical bar at the side, by clicking on it the sidebar slides in and pushes the content of the page to the right. So, that <code>a#menu-icon</code> is responsible for the vertical bar.</p>
+
+									<h3 class="bordered">Navigation Menu Structure</h3>
+									<p>
+										The navigation which is wrapped by <code>div#side-contents</code> is a simple <code>ul</code> element. 
+									</p>
+									<p>
+										<strong>
+											<span class="label label-info">Notice:</span>
+											You can either have one-level menu or two-level menu. Theme does not support multiple level menu.
+										</strong> 
+									</p>
+									<pre>
+<ul id="navigation">
+	
+	<!-- two level menu sample -->
+	<li class="menu-item-has-children current-menu-parent"><a href="#">Home</a>
+		<ul class="sub-menu">
+			<li class="nav-prev">
+				<a href="#"><i class="fa fa-angle-left"></i>Home</a>
+			</li>
+			<li class="current-menu-item"><a href="index.html">KenBurn Slider</a></li>
+			<li><a href="home-2.html">Fullscreen Portfolio</a></li>
+			<li><a href="home-3.html">Page with MasterSlider</a></li>
+			<li><a href="home-4.html">Animated Captions KenBurn</a></li>
+		</ul>
+	</li>
+
+	<!-- single menu item -->
+	<li>
+		<a href="#">Home</a>
+	</li>
+</ul>
+									</pre>
+									<p>
+										<strong>How about current menu which indicates that the user is viewing this page?</strong><br>
+										Well, that is pretty simple, you just need to add a class to the corresponding <code>li</code> item. like this:
+									</p>
+									<pre>
+<!-- single current menu item -->
+<li class="current-menu-item">
+	<a href="#">Home</a>
+</li>
+									</pre>
+									<p>At two-level menus the situation is similar but the parent <code>ul</code> also needs a class of <code>.current-menu-parent</code>. See below:</p>
+									<pre>
+<li class="menu-item-has-children current-menu-parent"><a href="#">Blog</a>
+	<ul class="sub-menu">
+		<li class="current-menu-item">
+			<a href="blog-grid.html">Blog Grid</a>
+		</li>
+		<li>
+			<a href="blog-list.html">Blog list</a>
+		</li>
+		. . . 
+	</ul>
+</li>
+									</pre>
+
+									<h3 class="bordered">Social icons at side footer</h3>
+									<p>We have put the social icons of your service of company at the footer of the sidebar, but this is not restrict, you can put any important contents there. For the record, this is the mark-up for the social icons</p>
+									<pre>
+<ul class="social-icons">
+	<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+	<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+	<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+	<li><a href="#"><i class="fa fa-flickr"></i></a></li>
+	<li><a href="#"><i class="fa fa-youtube"></i></a></li>
+	<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+</ul>
+									</pre>
+									<p>Please notice that we have used the FontAwesome icon library here, you can find more information about usage and further readings about it at the <a href="#externals">External libraries</a> section of this documentation file. </p>
+
+
+								</div>
+
+								<div id="con-regular">
+									<h2 class="lined">Regular Pages</h2>
+									<p>What Do we mean by a <em>Regular page</em>?</p>
+									<p>Below image is what we refer to a regular page in this text.</p>
+									<img src="img/regular-page.png" alt="" class="img-responsive">
+
+									<p>
+										This is really simple, just put your contents inside this structure:
+									</p>
+									<pre>
+<div id="main-content"> 
+	<div class="page-wrapper regular-page">
+		<div class="container">
+			<!-- your page contents here -->
+		</div>
+	</div>
+</div>
+									</pre>
+
+									<h3 class="bordered">Breadcrumbs</h3>
+									<p>You may need a breadcrumb at the top of your regular-page and you can do that by following this pattern of code:</p>
+									<pre>
+<!-- breadcrumbs -->
+<ol class="breadcrumb">
+	<li><a href="#">Home</a></li>
+	<li><a href="#">Pages</a></li>
+	<li class="active">Services</li>
+</ol>
+<!--/ breadcrumbs -->
+									</pre>
+									<p>Above code will produce this:</p>
+									<!-- breadcrumbs -->
+									<ol class="breadcrumb">
+										<li><a href="#">Home</a></li>
+										<li><a href="#">Pages</a></li>
+										<li class="active">Services</li>
+									</ol>
+									<!--/ breadcrumbs -->
+
+									<h3 class="bordered">Back to top button</h3>
+									<p>We have included and back-to-top button at the very end  of some pages. It is a simple <code>a</code> elements which it's behavior is controlled by JS to smoothly scroll to top of the page.</p>
+									<pre>
+<hr/>
+<a class="back-to-top" href="#"></a>
+									</pre>
+
+									<h3 class="bordered">Rows and Columns</h3>
+									<p>You should use separating <code>DIV</code>s to structure your content in a regular-page. Try to think of it as a page with some rows. In turn each row can have some columns. This template follows the grid design of Bootstrap framework. So as a simple example you can have two rows in your page.</p>
+									<pre>
+<div id="main-content"> 
+	<div class="page-wrapper regular-page">
+		<div class="container">
+			<div class="row">
+				<!-- some contents -->
+			</div>
+			<div class="row">
+				<!-- some contents -->
+			</div>
+		</div>
+	</div>
+</div>
+									</pre>
+									<p>If you want to have columns inside a row, you can do as follow, but please refer to Bootstrap documentation to get more specific information.</p>
+									<pre>
+<div class="row">
+	<div class="col-md-4">
+		<!-- contents of the column -->
+	</div>
+	<div class="col-md-4">
+		<!-- contents of the column -->
+	</div>
+	<div class="col-md-4">
+		<!-- contents of the column -->
+	</div>
+</div>
+									</pre>
+
+									<h3 class="bordered">Vertical distances</h3>
+									<p>You will definitely need to add some space between two rows (or any elements) we have provided four asset classes for you to add various vertical spaces between your elements</p>
+									<ul class="list-unstyled">
+										<li><code>.mb-small</code></li>
+										<li><code>.mb-medium</code></li>
+										<li><code>.mb-large</code></li>
+										<li><code>.mb-xlarge</code></li>
+									</ul>
+									<p> simply add this classes to the <code>.row</code> element.</p>
+
+
+
+									<h3 class="bordered">Regular-page with Sidebar</h3>
+									<p>
+										Adding a sidebar to a regular page is a simple job. You just need to add a column to the main row of the page see below:
+									</p>
+									<p>
+										<span class="label label-info">Notice:</span> Don't forget to add <code>.regular-sidebar</code> class to the sidebar col element (line 19)
+									</p>
+									<pre>
+<div id="main-content">
+	<div class="page-wrapper regular-page">
+		<div class="container">
+			<!-- page title -->
+			<div class="row">
+				<div class="col-md-12">
+					<h2 class="section-title double-title">
+						<span>Our</span>Page
+					</h2>
+				</div>
+			</div>
+			<!--/ page title -->
+			<div class="row mb-large">
+				<!-- main content -->
+				<div class="col-md-8">
+					. . . 
+				</div>
+				<!-- sidebar -->
+				<div class="col-md-4 regular-sidebar">
+					. . . 
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+									</pre>
+
+								</div>
+
+								<div id="con-port">
+									<h2 class="lined">Portfolio pages</h2>
+									<p>There are various portfolio pages, some of theme share the same structure but some are different. We will review the structure of each layout.</p>
+
+									<h3 class="bordered">Horizontal Portfolio</h3>
+									<img src="img/port-1.png" alt="image" class="img-responsive">
+									<h5>Structure</h5>
+									<pre>
+<div id="main-content" class="dark-template">
+	<div class="page-wrapper">
+		
+		<div class="page-side ajax-element">
+		</div>
+
+		<div class="page-main ajax-element">
+		</div>
+
+		<!--Ajax folio-->
+		<div id="ajax-folio-loader">
+		</div>
+		<div id="ajax-folio-item"></div>
+		<!--Ajax folio-->
+	</div>
+</div>
+									</pre>
+									<ul>
+									    <li><code>.page-side</code> is the wrapper for the sidebar.</li>
+									    <li><code>.page-main</code> is the wrapper for contents of the page.</li>
+									    <li><code>#ajax-folio-loader</code>is the loading element for page transition via AJAX</li>
+									    <li><code>#ajax-folio-item</code> is the container for new contents which will populated via AJAX</li>
+									    <li><code>.ajax-element</code> indicates the classed that are associated with the ajax call.</li>
+									</ul>
+
+									<h5>Sidebar of portfolio</h5>
+									<p>Sidebar of some portfolio layouts share the same layout, typically there is a title which is vertically centred</p>
+									<pre>
+<div class="page-side ajax-element">
+	<div class="inner-wrapper vcenter-wrapper">
+		<div class="side-content vcenter">
+			<div class="title">
+				<span class="first-part">Browse</span>
+				<span class="second-part">Category</span>
+				<span>Visual effect</span>
+			</div>
+		</div>
+	</div>
+</div>
+									</pre>
+
+									<h5>Horizontal portfolio items</h5>
+									<p>The structure of a horizontal portfolio is as follows</p>
+									<pre>
+<div class="page-main ajax-element">
+	<!-- Portfolio wrapper -->	
+	<div class="ajax-folio vertical-folio">
+		<!-- Portflio Item -->		
+		<div class="vf-item tj-hover-3 set-bg">. . .</div>
+		<!-- Portflio Item -->		
+		<div class="vf-item tj-hover-3 set-bg">. . . </div>
+		.
+		.
+		.
+	</div>
+	<!-- End Portfolio wrapper -->
+</div>
+									</pre>
+									<p>Please note that the <code>.tj-hover-3</code> is responsible for the type of overlay on each item and <code>.set-bg</code> will add a handler of JS to handle the background image of the item.</p>
+									<p>Inside each portfolio item there will be a hyper-link with <code>.ajax-portfolio</code> class.</p>
+									<pre>
+<a href="portfolio-item.html" class="ajax-portfolio">
+	<img src="img/portfolio/horizontal/01.jpg" alt="alt" class="img-responsive">
+	<!-- Item Overlay -->	
+	<div class="tj-overlay vcenter-wrapper">
+		<div class="overlay-texts vcenter">
+			<h3 class="title">title</h3>
+			<h4 class="subtitle">short description</h4>
+		</div>
+	</div>
+	<!-- /Item Overlay -->	
+</a>
+									</pre>
+
+
+
+									<h3 class="bordered">Video Portfolio</h3>
+									<p>Video portfolio is essentially the same thing as above but just the item is different, let's see how</p>
+									<pre>
+<!-- Portfolio Item -->		
+<div class="vf-item tj-hover-3 set-bg">
+	<a href="portfolio-item.html" class="ajax-portfolio">
+		<div class="owl-videobg hoverPlay" data-src="video/01/01.mp4"></div>
+		<!-- Item Overlay -->	
+		<div class="tj-overlay vcenter-wrapper">
+			<div class="overlay-texts vcenter">
+				<h3 class="title">title</h3>
+				<h4 class="subtitle">short description</h4>
+			</div>
+		</div>
+		<!-- /Item Overlay -->	
+	</a>
+</div>
+<!-- /Portfolio Item -->
+									</pre>
+									<p>Notice that the only change is replacement of <code>img</code> tag with a <code>div</code> with class of <code>.owl-videobg</code>, you can get more info about the video backgrounds at <a href="#sh-video">video section</a> of this doc.</p>
+
+
+									<h3 class="bordered">Vertical Portfolio</h3>
+									<img src="img/port-2.png" alt="image" class="img-responsive">
+									<p>You may find yourself in a situation that you need to show you thumbnails in a vertical way but in a horizontal order, then this layout is perfect for you.</p>
+									<p>The main structure is very similar to Horizontal Portfolio but you need to add <code>.abs</code> and <code>.dark-template</code> classes to the main-content:</p>
+									<pre><div id="main-content" class="abs dark-template">. . .</div></pre>
+									<p>Also add <code>.horizontal-folio-wrraper</code> to the <code>.page-main</code>:</p>
+									<pre><div class="page-main horizontal-folio-wrraper ajax-element">. . . </div></pre>
+									<p>And the contents of the portfolio list will be like this:</p>
+									<pre>
+<!-- portfolio wrapper -->	
+<div class="horizontal-folio">
+	
+	<!-- portfolio Item -->		
+	<div class="gp-item tj-circle-hover">
+		<a href="portfolio-item.html" class="ajax-portfolio">
+			<img src="img/portfolio/vertical/01.jpg" alt="alt" class="img-responsive">
+			<!-- Item Overlay -->	
+			<div class="tj-overlay">
+				<div class="content">
+					<div class="circle"><i class="fa fa-link"></i></div>
+					<div class="details">
+						<h4 class="title">Title</h4>
+						<h5 class="subtitle">Short description </h5>
+					</div>	
+				</div>
+			</div>
+			<!-- /Item Overlay -->	
+		</a>
+	</div>
+	<!-- /portfolio Item -->
+	.
+	.
+	.
+</div>
+									</pre>
+
+
+
+									<h3 class="bordered">Grid Portfolio</h3>
+									<img src="img/port-3.png" alt="image" class="img-responsive">
+									<p>&nbsp;</p>
+									<p>Grid portfolio uses jQuery isotope plugin. The main layout is the same as previously described except few changes:</p>
+									<pre>
+<div class="page-main ajax-element">
+	<!-- portfolio wrapper -->	
+	<div class="grid-portfolio no-padding">
+		<!-- portfolio items -->
+	</div>
+</div>
+									</pre>
+									<p>Each item in the list is as follow:</p>
+									<pre>
+<!-- portfolio Item -->		
+<div class="gp-item tj-hover-2">
+	<a href="portfolio-item.html" class="ajax-portfolio normal">
+		<img src="img/portfolio3/01.jpg" alt="alt" class="img-responsive">
+		<!-- Item Overlay -->	
+		<div class="tj-overlay">
+			<i class="fa fa-angle-right overlay-icon"></i>
+			<div class="overlay-texts">
+				<h3 class="title">Project title</h3>
+				<h4 class="subtitle">Short Description</h4>
+			</div>
+		</div>
+		<!-- /Item Overlay -->	
+	</a>
+</div>
+<!-- /portfolio Item -->
+									</pre>
+									<p>In case you want to add a gutter between grid elements, remove the <code>.no-padding</code> class.</p>
+
+									<h5>Filtering</h5>
+									<p>if you want to add filtering ability, add this to the <code>.page-side</code>:</p>
+									<pre>
+<ul class="grid-filters">
+  <li class="active"><a href="#" data-filter="*">all</a></li>
+  <li><a href="#" data-filter=".web-design">Web Design</a></li>
+  <li><a href="#" data-filter=".photography">Photography</a></li>
+  <li><a href="#" data-filter=".video">Video</a></li>
+  <li><a href="#" data-filter=".print">Print</a></li>
+</ul>
+									</pre>
+									<p>Then you should add corresponding classes to your <code>.gp-items</code> like this:</p>
+									<pre>
+<div class="gp-item tj-hover-2 web-design"> . . . </div>
+<div class="gp-item tj-hover-2 photography web-design"> . . . </div>
+									</pre>
+
+									<h3 class="bordered">Portfolio single</h3>
+									<img src="img/port-4.png" alt="image" class="img-responsive">
+									<p>&nbsp;</p>
+									<p>This page also uses the same layout that we have been discussing. The important difference is the contents of the <code>.page-main</code>, that you need to add <code>.sync-width-parent</code> to the <code>.page-wrapper</code> and the contents of the page will be structured as so:</p>
+									<pre>
+<!-- parallax header -->
+<div class="parallax-head set-bg sync-width">
+	<img src="img/portfolio/15.jpg" class="img-responsive" alt="image" >
+</div>
+<!-- the contents of the page -->
+<div class="parallax-contents">. . .</div>
+									</pre>
+									<h3 class="bordered">Portfolio video</h3>
+									<p>In case you want to use a video instead of an Image as the cover for your portfolio item, you can do as such easily:</p>
+									<pre>
+<!-- parallax header -->
+<div class="parallax-head sync-width owl-videobg autoplay" data-src="video/03/03.mp4"></div>
+									</pre>
+
+									<h3 class="bordered">Portfolio single alt</h3>
+									<img src="img/port-5.png" alt="image" class="img-responsive">
+									<p>&nbsp;</p>
+									<p>This page is an alternative for your portfolio page. The main structure of the layout is</p>
+									<pre>
+<div id="main-content" class="dark-template">
+	<div class="page-wrapper rightside-folio">
+		<div class="page-side move-with-js">
+			<div class="inner-wrapper">
+				<!-- side contents -->
+			</div>
+		</div>
+
+		<div class="page-main">
+			<!-- main contents -->
+		</div>
+	</div>
+</div>
+									</pre>
+									<p>Note to the <code>.rightside-folio</code> and <code>.move-with-js</code> classes, they are essential.</p>
+									<p>
+										the header section with the parallax title needs this structure:
+									</p>
+									<pre>
+<div id="project-header" class="parallax-parent">
+	<div class="header-cover parallax-parent">
+		<img src="img/portfolio4/01.jpg" alt="image" >
+	</div>
+	<div class="header-content tj-parallax">
+		<div class="text-center">
+			<h2 class="project-title">
+				Title
+			</h2>
+		</div>
+	</div>
+	<div class="project-caption">
+		<p>
+			This is the excerpt for the item 
+		</p>
+	</div>
+</div>
+									</pre>
+
+									<h3 class="bordered">Portfolio video alt</h3>
+									<p>In order to add a video instead of image you should change the <code>.project-header</code> to this mark-up:</p>
+									<pre>
+<div id="project-header">				
+	<div class="header-cover parallax-parent">
+		<div class="owl-videobg autoplay" data-src="video/04/04.mp4"></div>
+		<div class="header-content tj-parallax">
+			<div class="text-center">
+				<h2 class="project-title">
+					Title
+				</h2>
+			</div>
+		</div>
+	</div>
+	<div class="project-caption">
+		<p>
+			This is the excerpt for the item
+		</p>
+	</div>
+</div>
+									</pre>
+
+									
+								</div>
+
+								<div id="con-gal">
+									<h2 class="lined">Gallery pages</h2>
+									<h3 class="bordered">Full screen galleries</h3>
+									<p>One type of Galleries that you can use for your site are full screen gallerias. They come with variations:</p>
+									<ul>
+									    <li>Vertical thumbnails</li>
+									    <li>Horizontal thumbnails</li>
+									    <li>Without thumbnail</li>
+									</ul>
+									<p>Also full screen galleries support various media types:</p>
+									<ul>
+									    <li>Images</li>
+									    <li>local hosted videos</li>
+									    <li>Youtube hosted vedeos</li>
+									    <li>Vimeo hosted videos</li>
+									</ul>
+									<p>The simplest layout for a gallery is :</p>
+									<pre>
+<div id="main-content" class="abs">
+	<div class="tj-ms-slider ms-skin-toranj fillmode"  data-counter="true" data-view="mask" id="masterslider">
+		<div class="ms-slide">
+            <img src="../masterslider/blank.gif" data-src="img/home/01.jpg" alt="alt"/>
+        </div>
+        <div class="ms-slide">
+            <img src="../masterslider/blank.gif" data-src="img/home/02.jpg" alt="alt"/>
+        </div>
+        . . .
+	</div>
+</div>
+									</pre>
+									<p>in order to add a <strong>vertical</strong> thumbnail bar you need to modify your code the mark-up is pretty expressive</p>
+									<pre>
+<div class="tj-ms-slider ms-skin-toranj tj-ms-gallery tj-vertical-gallery fillmode" 
+	data-gallery="true" 
+	data-dir="v" 
+	data-view="mask" 
+	data-counter="true" 
+	id="masterslider">
+	<!-- add another image source as a thumbnail -->
+	<div class="ms-slide">
+	    <img src="masterslider/blank.gif" data-src="img/gallery/a2.jpg" alt="lorem ipsum dolor sit"/>    
+	    <img src="img/gallery/thumbs/a2.jpg" alt="thumb-2" class="ms-thumb"/>
+	</div>
+
+</div>
+									</pre>
+									<p>If you want it <strong>horizontal</strong>, then it is even easier:</p>
+									<pre>
+<div class="tj-ms-slider ms-skin-toranj tj-ms-gallery fillmode"  data-gallery="true"  data-counter="true" id="masterslider">
+. . . 
+</div>
+									</pre>
+									<h2>Available options for fullscreen galleries</h2>
+<p>We have added some functionallity to give you the control over galleres behavior. Folowing attributes must be added to the main gallery wrapper which has class <code>tj-ms-slider</code> you can check masterslider documentation for more informations and options</p>
+<ul>
+    <li>data-width
+    	<p>width of slider or gallery if it needs to have a fixed width</p>
+    </li>
+    <li>
+    	data-height
+    	<p>height of slider or gallery if it needs to have a fixed height</p>
+    </li>
+    <li>data-layout
+    	<p>
+    		Specifies layout of the slider, it accepts following values:
+			<ul>
+				<li><strong>boxed: </strong>The default layout of slider, size of the slider does not exceed the specified width and height in slider options.</li>
+				<li><strong>fullwidth: </strong>Forces the slider to adapt width to the browser width.</li>
+				<li><strong>fullscreen: </strong>Forces the slider to adapt width and height to the browser window dimension.</li>
+				<li><strong>fillwidth: </strong>Enables the slider to adapt width to its parent element.</li>
+				<li><strong>autofill: </strong>Enables the slider to adapt width and height to its parent element.</li>
+				<li><strong>partialview: </strong>It's like the boxed layout but nearby slides are always visible.</li>
+			</ul>
+		</p>	
+</li>
+    <li>
+    	data-view
+    	<p>"basic", "fade","mask", ... The slide changing transition. see master slider tranisitons</p>
+    </li>
+    <li>
+    	data-dir
+    	<p>the direction of sliding. "h" for horizontal and "v" for vertical</p>
+    </li>
+     <li>
+    	data-counter
+    	<p>whether or not we should show slide counter. default is false</p>
+    </li>
+    <li>
+    	data-gallery
+    	<p>whether or not we want to use gallery mode with thumbs. default is false</p>
+    </li>
+     <li>
+    	data-autoheight
+    	<p>whether or not we should set the slider height based on each image height. default is false</p>
+    </li>
+    <li>
+    	data-mouse
+    	<p>whether or not we want to use mouse swip navigation. default is true. <strong>Set this to false if you want to use iframe videos like Vimeo or YouTube</strong></p>
+    </li>
+      <li>
+    	<strong>data-fillmode</strong>
+    	<p>Specifies the slide background scaling method. Its acceptable values are "fill", "fit", "stretch", "center" and "tile"</p>
+    </li>
+    <li>
+    	<strong>Since version 2.0. Full screen galleries can have play/pause button and timer bar</strong>
+    </li>
+    <li>
+    	<strong>data-playbtn</strong>
+    	<p>whether or not we want to have a play/pause button. Default is false</p>
+    </li>
+</ul>
+
+									<p>You might want to add some <a href="#sh-captions">captions</a> to your images, for each one you should add them as a layer to your slider.</p>
+									<pre>
+<div class="ms-slide">
+    <img src="masterslider/blank.gif" data-src="img/gallery/a2.jpg" alt="lorem ipsum dolor sit"/>    
+    <img src="img/gallery/thumbs/a2.jpg" alt="thumb-2" class="ms-thumb"/>
+    <div class="ms-layer caption cap-bordered cap-bottom cap-left" data-effect="left(100)"
+            data-duration="1000"
+            data-ease="easeOutExpo"
+            data-delay="0">
+		<h2 class="cap-title">Caption Bottom-Left</h2>
+		<div class="cap-des">
+			<p>The Treasure House Awaits <br>You In Your Own Being<br> ~Rumi</p>
+		</div>
+	</div>
+</div>
+									</pre>
+									<p>Add a <strong>local hosted video</strong>:</p>
+									<pre>
+<div class="ms-slide">
+    <img src="../masterslider/blank.gif" data-src="video/08/08.png" alt="lorem ipsum dolor sit"/>
+    <img src="img/home/01.jpg" alt="thumb-1" class="ms-thumb"/>
+    <!-- slide background video -->
+    <video data-autopause="false" data-mute="true" data-loop="true" data-fill-mode="fill">
+        <source id="mp4" src="video/08/08.mp4" type="video/mp4"/>
+        <source id="webm" src="video/08/08.webm" type="video/webm"/>
+    </video>
+</div>
+									</pre>
+									<p>Add a <strong>Youtube hosted video</strong>:</p>
+									<pre>
+<div class="ms-slide">
+    <img src="../masterslider/blank.gif" data-src="img/home/03.jpg" alt="alt"/>   
+    <img src="img/home/03.jpg" alt="thumb-3" class="ms-thumb"/>
+    <a href="http://www.youtube.com/embed/yAEwO3wDdyM?autohide=2&amp;disablekb=0&amp;fs=1&amp;hd=0&amp;loop=0&amp;rel=0&amp;showinfo=0&amp;showsearch=0&amp;wmode=transparent" data-type="video">Youtube video</a>
+</div>
+									</pre>
+									<p>Add a <strong>Vimeo hosted video</strong>:</p>
+									<pre>
+<div class="ms-slide">
+    <img src="../masterslider/blank.gif" data-src="img/home/02.jpg" alt="alt"/>    
+    <img src="img/home/02.jpg" alt="thumb-2" class="ms-thumb"/>
+   	<a href="http://player.vimeo.com/video/93290081" data-type="video">Vimeo video</a>
+</div>
+									</pre>
+								</div>
+
+
+									<p>&nbsp;</p>
+									<h3 class="bordered">Masonry Gallery</h3>
+									<img src="img/gallery-masonry.png" class="img-responsive" alt="alt">
+									<p></p>
+									<p>This is basically a grid of thumbnails and users can see the images (or video) by clicking on any thumbnail.</p>
+									<pre>
+<!-- Gallery wrapper -->	
+<div class="grid-portfolio tj-lightbox-gallery">
+	<!-- Gallery Item -->		
+	<div class="gp-item tj-hover-4">
+		<a href="img/portfolio3/v01.jpg"  class="lightbox-gallery-item">
+			<img src="img/portfolio3/v01.jpg" alt="alt" class="img-responsive">
+			<!-- Item Overlay -->	
+			<div class="tj-overlay">
+				<i class="fa fa-angle-right overlay-icon"></i>
+			</div>
+			<!-- /Item Overlay -->	
+		</a>
+	</div>
+	<!-- /Gallery Item -->
+	.
+	.
+	.
+</div>
+									</pre>
+									<p>You can make any layout for this page using rows and cols.</p>
+
+									<p>&nbsp;</p>
+									<h3 class="bordered">Grid Gallery</h3>
+									<p>This gallery layout is basically same as grid portfolio, except it uses the capability of light-box to show full size images. So the only change is that we need a <code>.tj-lightbox-gallery</code> class for the wrapper element and you can see how you should do the markup for the items below:</p>
+									<pre>
+<!-- Gallery wrapper -->	
+<div class="grid-portfolio tj-lightbox-gallery">
+	<!-- Gallery Item -->		
+	<div class="gp-item tj-hover-4">
+		<a href="img/portfolio3/01.jpg"  class="lightbox-gallery-item">
+			<img src="img/portfolio3/01.jpg" alt="alt" class="img-responsive">
+			<!-- Item Overlay -->	
+			<div class="tj-overlay">
+				<i class="fa fa-angle-right overlay-icon"></i>
+			</div>
+			<!-- /Item Overlay -->	
+		</a>
+	</div>
+	<!-- /Gallery Item -->
+	.
+	.
+	.
+</div>
+									</pre>
+
+									<p>&nbsp;</p>
+									<h3 class="bordered">Full Grid Gallery</h3>
+									<p>For the full page grid gallery we don't need the sidebar of the main contents, but as you can see we have the filter element, fixed.</p>
+									<pre>
+<div id="main-content" class="dark-template">
+	<div class="page-wrapper">
+		<div class="page-main no-side">
+			<!-- Gallery wrapper -->	
+			<div class="grid-portfolio tj-lightbox-gallery">
+				<!-- Gallery Item -->		
+				<div class="gp-item tj-hover-4">
+					<a href="img/portfolio3/v01.jpg"  class="lightbox-gallery-item">
+						<img src="img/portfolio3/v01.jpg" alt="alt" class="img-responsive">
+						<!-- Item Overlay -->	
+						<div class="tj-overlay">
+							<i class="fa fa-angle-right overlay-icon"></i>
+						</div>
+						<!-- /Item Overlay -->	
+					</a>
+				</div>
+				<!-- /Gallery Item -->
+				.
+				.
+				.
+
+			</div>
+			<!-- /Gallery wrapper -->
+
+			<!-- Grid filter -->
+			<div class="fixed-filter">
+				<a href="#" class="select-filter"><i class="fa fa-filter"></i> Filter</a>
+				<ul class="grid-filters">
+				  <li class="active"><a href="#" data-filter="*">all</a></li>
+				  <li><a href="#" data-filter=".web-design">Web Design</a></li>
+				  <li><a href="#" data-filter=".photography">Photography</a></li>
+				  <li><a href="#" data-filter=".video">Video</a></li>
+				  <li><a href="#" data-filter=".print">Print</a></li>
+				</ul>
+			</div>
+			<!-- /Grid filter -->
+		</div>
+	</div>
+</div>
+									</pre>
+
+								<div id="con-blog">
+									<h2 class="lined">Blog Pages</h2>
+									<p>There are 4 variations of blog list available with the theme and 2 variations of blog post.</p>
+									<p>&nbsp;</p>
+									<h3 class="bordered">Grid Blog</h3>
+									<p>The Grid Blog is a creative layout with two columns of posts.</p>
+									<p>
+										There is a place to add the blog title and a very short description that describes your main focus of blog.
+									</p>
+									<pre>
+<div id="main-content" class="blog-grid">
+	<div class="page-side">
+		. . .
+	</div>
+
+	<div class="page-main blog-list">
+		<!-- blog grid wrapper -->	
+		<div class="grid-blog-list">
+			. . .
+		</div>
+</div>
+									</pre>
+
+									<p>&nbsp;</p>
+									<h3 class="bordered">Simple list Blog ( sidebar )</h3>
+									<p>This is more of a conventional blog list with three post types, a post with a featured image, or a post without it, and you can also find a quote post designed for you. The layouts are very simple and there is no point to discuss here, just go and take a look at the page markup to discover how you should add your content there.</p>
+
+									<p>&nbsp;</p>
+									<h3 class="bordered">Minimal Blog list</h3>
+									<p>Well, you may want to keep your pages dark and you may want a really simple blog, this one is for you. The layout is super simple but it uses isotope jQuery plugin and there is a load more button there to avoid pagination and related stuff, so you just need to make an ajax call to your php code to fetch some posts and add theme to the list, thats easy if you have worked with ajax pages.</p>
+
+
+
+
+
+
+
+								</div>
+
+
+								
+							</div>
+							<!-- END layouts -->
+
+
+							<!-- shortcode -->
+							<div class="row mb-xlarge" id="shortcode">
+								<h2 class="section-title double-title">
+									<span>Examples and</span>Shortcodes
+								</h2>
+
+
+								<!-- table of contents -->
+								<div class="contents">
+									<h2 class="lined">Contents</h2>
+									<ul class="list-border list-iconed list-hover">
+									    <!-- <li><a href="#sh-typo"><i class="fa fa-arrow-right"></i>Typography</a></li> -->
+									    <li><a href="#sh-captions"><i class="fa fa-arrow-right"></i>Captions</a></li>
+									    <li><a href="#sh-video"><i class="fa fa-arrow-right"></i>Video</a></li>
+									    <li><a href="#sh-lb"><i class="fa fa-arrow-right"></i>light-boxes</a></li>
+									    <li><a href="#sh-tabs"><i class="fa fa-arrow-right"></i>Tabs</a></li>
+									    <li><a href="#sh-acc"><i class="fa fa-arrow-right"></i>Accordions</a></li>
+									    <!-- <li><a href="#sh-he"><i class="fa fa-arrow-right"></i>Hover effects</a></li> -->
+									    <li><a href="#sh-widgets"><i class="fa fa-arrow-right"></i>Widgets</a></li>
+									    <li><a href="#sh-slider"><i class="fa fa-arrow-right"></i>Slider</a></li>
+									</ul>
+								</div>
+
+								<!-- <div id="sh-typo">
+									<h2 class="lined">Typography</h2>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+									tempor incididunt ut labore et dolore magna aliqua.</p>
+								</div> -->
+
+								<div id="sh-captions">
+									<h2 class="lined">Captions</h2>
+									<p>As a general guidence captions are divs with the class of <code>.caption</code>. caption titles are identified by <code>h2</code> tags with the class of <code>.cap-title</code> and descriptions are divs with the class of <code>.cap-des</code>.</br>
+									<strong>We got 8 types of captions and combination of positions and opacities ready for you to use.</strong></p>
+									<ul>
+									    <li><strong>Defualt Caption</strong></li>
+									    <p>Our <strong>default caption</strong> would use some initial divs. first div with classes of <code>.caption</code> and <code>.cap-full</code> following with wrapper div with a class of <code>.vcenter-wrapper</code> and then thats our identifier div with the class of <code>.cap-lg</code>. as you can see below:</p>
+									    <pre>
+<div class="img-container dark-overlay">
+	<img src="img/captions/01.jpg" alt="img">
+	<div class="caption cap-full">
+		<div class="vcenter-wrapper">
+			<div class="cap-lg vcenter">
+				<h2 class="cap-title allcaps"><!-- caption title --></h2>
+				<div class="cap-des">
+					<p>
+					<!-- caption description -->
+					</p>
+				</div>
+				<a href="#" class="btn btn-toranj btn-lg"><!-- button title --></a>
+			</div>
+		</div>
+	</div>
+</div>
+									    </pre>
+									    <li><strong>Push Down Caption</strong></li>
+									    <p><strong>Push down captions</strong> are exactly like default captions. except they use <code>.cap-lg-pushdown</code> class along with <code>.cap-lg</code> class.</p>
+									    <pre>
+<div class="img-container">
+	<img src="img/captions/04.jpg" alt="img">
+	<div class="caption cap-full">
+		<div class="vcenter-wrapper">
+			<div class="cap-lg cap-lg-pushdown vcenter">
+				<h2 class="cap-title allcaps"><!-- caption title --></h2>
+				<a href="#" class="btn btn-transparent btn-lg"><!-- button title --></a>
+			</div>
+		</div>
+	</div>
+</div>
+									    </pre>
+									    <li><strong>Toranj Caption</strong></li>
+									    <p><strong>Toranj caption</strong> will provide you a more consistent caption with Toranj theme. you just need to add class of <code>.cap-toranj</code> along with <code>.caption</code> class. then to have double title add <code>.double-title</code> class to <code>h2</code> tag which identifies the <strong>caption title</strong>.</p>
+									    <pre>
+<div class="img-container  dark-overlay">
+	<img src="img/captions/05.jpg" alt="img">
+	<div class="caption cap-toranj">
+		<h2 class="cap-title double-title">
+			<span><!-- small caption title --></span><!-- big caption title -->
+		</h2>
+		<div class="cap-des">
+			<p><!-- caption description --></p>
+		</div>
+	</div>
+</div>
+									    </pre>
+
+									    <li><strong>Bordered Caption</strong></li>
+									    <p>You can have <strong>Bordered caption</strong> by adding <code>.cap-bordered</code> class along with <code>.caption</code> class. optional classes can be used to determine the position of the caption. as the example:</p>
+									    <pre>
+<div class="img-container">
+	<img src="img/captions/06.jpg" alt="img">
+	<div class="caption cap-bordered cap-bottom cap-left">
+		<h2 class="cap-title">
+			<!-- caption title -->
+		</h2>
+		<div class="cap-des">
+			<p>
+				<!-- caption description -->
+			</p>
+		</div>
+		<a href="#" class="btn btn-transparent btn-lg"><!-- button title --></a>
+	</div>
+</div>
+									    </pre>
+									    
+									    <p>to <strong>reverse</strong> the border just use <code>.cap-reverse</code> along with <code>.cap-bordered</code> class. you can use optional positional classes as the example below:</p>
+									    <pre>
+<div class="img-container">
+	<img src="img/captions/07.jpg" alt="img">
+	<div class="caption cap-bordered cap-bottom cap-right cap-reverse">
+		<h2 class="cap-title">
+			<!-- caption title -->
+		</h2>
+		<div class="cap-des">
+			<p>
+				<!-- caption description -->
+			</p>
+		</div>
+		<a href="#" class="btn btn-transparent btn-lg"><!-- button title --></a>
+	</div>
+</div>
+									    </pre>
+									    <li><strong>Elegant Caption</strong></li>
+									    <p>To have <strong>Elegant caption</strong> add <code>.cap-elegant</code> class along with <code>.caption</code> class.</p>
+									    <pre>
+<div class="img-container">
+	<img src="img/captions/08.jpg" alt="img">
+	<div class="caption cap-elegant">
+		<h2 class="cap-title"><!-- caption title --></h2>
+		<div class="cap-des">
+			<p><!-- caption description --></p>
+		</div>
+		<a href="#" class="btn btn-transparent btn-lg"><!-- button title --></a>
+	</div>	
+</div>
+									    </pre>
+									    <li><strong>Boxed Caption</strong></li>
+									    <p>you can use a key class of <code>.cap-boxed</code> along with <code>.caption</code> class to have boxed caption. to determine the position and opacity of captionset of <code>.cap-bottom</code>, <code>.cap-left</code>, <code>.cap-light</code>, <code>.cap-top</code>, <code>cap-right</code> and <code>.cap-dark</code> are optional. you can see two proper use of each set below:</p>
+									    <pre>
+<div class="img-container">
+	<img src="img/captions/02.jpg" alt="img">
+	<div class="caption cap-boxed cap-bottom cap-left cap-light">
+		<h2 class="cap-title allcaps"><!-- caption title --></h2>
+		<div class="cap-des">
+			<p>
+				<!-- caption description -->
+			</p>
+		</div>
+	</div>
+</div>
+										</pre>
+										<p>or</p>
+										<pre>
+<div class="img-container">
+	<img src="img/captions/12.jpg" alt="img">
+	<div class="caption cap-boxed cap-top cap-right cap-dark">
+		<h2 class="cap-title allcaps"><!-- caption title --></h2>
+		<div class="cap-des">
+			<p>
+				<!-- caption description -->
+			</p>
+		</div>
+	</div>
+</div>
+									    </pre>
+									    <li><strong>Ribbon Caption</strong></li>
+									    <p><strong>Ribbon captions</strong> are provided by adding <code>.cap-ribbon</code> class to a <strong>boxed caption</strong>. default position of ribbon caption is at the bottom of image. dark and light themes can be applied by using <code>.cap-dark</code> and <code>.cap-light</code> classes.</p>
+									    <pre>
+<div class="img-container">
+	<img src="img/captions/13.jpg" alt="img">
+	<div class="caption cap-boxed cap-ribbon cap-dark">
+		<h2 class="cap-title allcaps"><!-- caption title --></h2>
+		<div class="cap-des">
+			<p>
+				<!-- caption description -->
+			</p>
+		</div>
+	</div>
+</div>
+									    </pre>
+									    <p>To push the <strong>Ribbon caption</strong> to the top you just need to add <code>.cap-top</code> class to the set. as the example:</p>
+									    <pre>
+<div class="img-container">
+	<img src="img/captions/03.jpg" alt="img">
+	<div class="caption cap-boxed cap-ribbon cap-top cap-light">
+		<h2 class="cap-title allcaps"><!-- caption title --></h2>
+		<div class="cap-des">
+			<p>
+				<!-- caption description -->
+			</p>
+		</div>
+	</div>
+</div>
+									    </pre>
+									    <li><strong>Bordered Compact Caption</strong></li>
+									    <p>To have a <strong>Bordered Compact Caption</strong> you need to <strong>compact</strong> a <strong>bordered caption</strong> by adding <code>.cap-compact</code> class to the set.</p>
+									    <pre>
+<div class="row">
+	<div class="col-md-6">
+		<!-- bordered compact caption -->
+		<div class="img-container">
+			<img src="img/captions/10.jpg" alt="img">
+			<div class="caption cap-bordered cap-compact cap-bottom cap-left">
+				<h2 class="cap-title allcaps">
+					<!-- caption title -->
+				</h2>
+			</div>
+		</div>
+		<!-- /bordered compact caption -->
+	</div>						
+</div>
+									    </pre>
+									    <p>all the optional classes could be used here as well.</p>
+									    <strong>Bordered Compact Caption Reverse</strong>
+									    <p>So to <strong>reverse</strong> the bordered campact caption simply reverse the <strong>bordered caption</strong> by adding <code>.cap-reverse</code> class. other optional classes could be used to make it look great as the example below:</p>
+									    <pre>
+<div class="img-container">
+	<img src="img/captions/11.jpg" alt="img">
+	<div class="caption cap-bordered cap-compact cap-reverse cap-bottom cap-right">
+		<h2 class="cap-title allcaps">
+			<!-- caption title -->
+		</h2>
+	</div>
+</div>
+									    </pre>
+									</ul>
+								</div>
+
+								<div id="sh-video">
+									<h2 class="lined">Video</h2>
+									<h3 class="bordered">Adding a Youtube player</h3>
+									<p>You should go to youtube and get the embed code, then put it at your content, but if you want it to be responsive, you should wrap that code with a <code>div</code> with class of <code>.video-container</code> like so:</p>
+									<pre>
+<div class="video-container">
+	<iframe src="//player.vimeo.com/video/93290081" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div>
+									</pre>
+
+
+									<h3 class="bordered">Adding a Vimeo player</h3>
+									<p>Similarly You should go to vimeo and get the embed code, then put it at your content, but if you want it to be responsive, you should wrap that code with a <code>div</code> with class of <code>.video-container</code> like so:</p>
+									<pre>
+<div class="video-container">
+	<iframe src="http://www.youtube.com/embed/yAEwO3wDdyM?autohide=2&amp;disablekb=0&amp;fs=1&amp;hd=0&amp;loop=0&amp;rel=0&amp;showinfo=0&amp;showsearch=0&amp;wmode=transparent" frameborder="0"></iframe>
+</div>
+									</pre>
+
+
+									<h3 class="bordered">Adding a Local video player</h3>
+									<p>You can have your videos hosted on you server, the theme comes with a HTML5 video player that you can use in such cases. You can introduce the MP4 and WEBM formats to it and it will play accordingly.</p>
+									<pre>
+<video class="mejs-player video-html5" controls preload="none" poster="video/echo-hereweare.jpg">
+	<source src="video/echo-hereweare.mp4" type='video/mp4' />
+</video>
+									</pre>
+
+									<h3 class="bordered">Adding a background video</h3>
+									<p>Theme comes with the capability to play videos as a background of a div or any element with or without a specific height. Sometimes an element has a strict height, then the video will fill the area but sometimes there is no strict heigh for an element, then the video will extend the height of that element to the best fit based on the ratio of the video.</p>
+									<p>
+										Please notice that you should have MP4 and/or Webm and jpg of your video with same filenames in the same folder but you will just provide the .mp4 address here, that's enough. 
+									</p>
+									<p>The basic markup for a background video is:</p>
+									<pre>
+<div class="img-container">
+	<div class="owl-videobg autoplay" data-src="video/01/01.mp4"></div>
+</div>
+									</pre>
+									<p><code>.owl-video</code> is essential for any background video, and as you see the markup is super simple. The <code>.autoplay</code> is telling the JS file that I need this to be autoplay and surly it will be looped.</p>
+									<p>Now, there is a possibility to make it play and paused by entering and exiting the mouse by replacing <code>.autoplay</code> with <code>.hoverPlay</code>.</p>
+									<p>As you can see you can integrate theme captions and overlays or hover effects with this videos very easily like so:</p>
+									<pre>
+<div class="img-container">
+	<div class="owl-videobg hoverPlay dark-overlay" data-src="video/03/03.mp4"></div>
+	<div class="caption cap-bordered cap-compact cap-bottom cap-left">
+		<h2 class="cap-title allcaps">
+			Need you mouse</br>to play the video 
+		</h2>
+	</div>
+</div>
+									</pre>
+
+								</div>
+
+								<div id="sh-lb">
+									<h2 class="lined">Light-boxes</h2>
+									<p>Light boxes are awesome in this theme, we have put lots of effort to make this feature versatile since stand alone.</p>
+									<p>
+										<strong>What kinds of media can be light-boxed?</strong>
+									</p>
+									<ul>
+									    <li>images</li>
+									    <li>youtube video player</li>
+									    <li>vimeo video player</li>
+									    <li>local hosted video player</li>
+									</ul>
+									<p>Cool, right?</p>
+									<p>
+										<strong>How a light-box can be triggered?</strong>
+										it needs a anchor link
+									</p>
+									<p>
+										<strong>Can I have a gallery with light-box?</strong>
+										Yes, sure you can have image, video or mixed galleries.
+									</p>
+									<h3 class="bordered">Basic mark-up</h3>
+									<pre>
+<a href="img/portfolio/05.jpg" class="tj-lightbox tj-hover-4">
+	<img src="img/portfolio3/20.jpg" class="img-fit" alt="alt">
+	<div class="tj-overlay">
+		<i class="fa fa-heart-o overlay-icon"></i>
+	</div>
+</a>
+									</pre>
+									<h3 class="bordered">Youtube</h3>
+									<pre>
+<a href="http://www.youtube.com/watch?v=0O2aH4XLbto" class="tj-lightbox tj-hover-4" data-type="iframe" title="some title">
+	<img src="img/portfolio3/21.jpg" class="img-fit" alt="">
+	<div class="tj-overlay">
+		<i class="fa fa-play overlay-icon"></i>
+	</div>
+</a>
+									</pre>
+
+									<h3 class="bordered">vimeo</h3>
+									<pre>
+<a href="https://vimeo.com/45830194" class="tj-lightbox tj-hover-4" data-type="iframe" title="some title">
+	<img src="img/portfolio3/22.jpg" class="img-fit" alt="">
+	<div class="tj-overlay">
+		<i class="fa fa-play overlay-icon"></i>
+	</div>
+</a>
+									</pre>
+
+									<h3 class="bordered">Self hosted video</h3>
+									<pre>
+<a href="video/02/02.mp4" class="tj-lightbox tj-hover-4" data-type="localvideo" data-poster="video/02/02.png" title="some title">
+	<img src="img/portfolio3/23.jpg" class="img-fit" alt="alt">
+	<div class="tj-overlay">
+		<i class="fa fa-play overlay-icon"></i>
+	</div>
+</a>
+									</pre>
+
+									<h3 class="bordered">Gallery</h3>
+									<pre>
+<div class="tj-lightbox-gallery">
+	<a href="img/portfolio3/01.jpg" class="lightbox-gallery-item">
+		<img src="img/portfolio3/01.jpg" class="img-fit" alt="img">
+	</a>
+	<a href="img/portfolio3/01.jpg" class="lightbox-gallery-item">
+		<img src="img/portfolio3/01.jpg" class="img-fit" alt="img">
+	</a>
+	.
+	.
+	.	
+</div>
+									</pre>
+
+								</div>
+
+								<div id="sh-tabs">
+									<h2 class="lined">Tabs</h2>
+									<p>Here we got some tabs and accordingly some contents under each item, you can add tabs by adding <code>li</code> tags with <code>a</code> tags within and accordingly <code>div</code>s with <code>.tab-item</code> classes within div with <code>.tabs-body</code> class.</p>
+									<p>You can choose the <strong>active</strong> tab by adding <code>.active</code> class to desired li tag and it's tab-item. if you don't determine any,first one will be active by defult.</p>
+<pre>
+<div class="tabs">
+	<ul class="tabs-head">
+		<li><a href="#">Tab #1</a></li>
+		<li><a href="#">Tab #2</a></li>
+		<li class="active"><a href="#">Tab #3</a></li>
+		<li><a href="#">Tab #4</a></li>
+	</ul>
+	<div class="tabs-body">
+		<div class="tab-item">
+			<strong>Some Header Tab #1</strong><br>
+			<!-- your content here -->
+			</div>
+		<div class="tab-item">
+			<strong>Some Header Tab #2</strong><br>
+			<!-- your content here -->
+			</div>
+		<div class="tab-item active">
+			<strong>Some Header Tab #3</strong><br>
+			<!-- your content here -->
+			</div>
+		<div class="tab-item">
+			<strong>Some Header Tab #4</strong><br>
+			<!-- your content here -->
+			</div>
+	</div>
+</div>
+</pre>
+								</div>
+
+								<div id="sh-acc">
+									<h2 class="lined">Accordions</h2>
+									<p>
+										Here is an accordion, you can add items by copying divs with class of <code>.item</code> . you can add a class of <code>.active</code> to the item you want to be oppened by default otherwise first one will be the <strong>active</strong> one by defult.</p>
+<pre>
+<div class="accordion">
+	<div class="item">
+		<div class="head">
+			<a href="#">This is an open tab</a>
+		</div>
+		<div class="body">
+			<div class="contents">
+				<strong>Some Content</strong>
+				<br>
+				<!-- your content here -->
+			</div>
+		</div>
+	</div>
+
+	<div class="item">
+		<div class="head">
+			<a href="#">This is an open tab</a>
+		</div>
+		<div class="body">
+			<div class="contents">
+				<strong>Some Content</strong>
+				<br>
+				<!-- your content here -->
+			</div>
+		</div>
+	</div>
+	.
+	.
+	.
+
+	<div class="item">
+		<div class="head">
+			<a href="#">This is an open tab</a>
+		</div>
+		<div class="body">
+			<div class="contents">
+				<strong>Some Content</strong>
+				<br>
+				<!-- your content here -->
+			</div>
+		</div>
+	</div>
+
+</div>
+</pre>									
+								</div>
+
+								<!-- <div id="sh-he">
+									<h2 class="lined">Hover effects</h2>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+									tempor incididunt ut labore et dolore magna aliqua.</p>
+								</div> -->
+
+								<div id="sh-widgets">
+									<h2 class="lined">Widgets</h2>
+									<p><strong>5 kind of widgets are ready to use here.they are all wrapped in a div with the class of <code>.widget</code>.</strong> <code>.widget title</code> class identifies the title of the widgets and optional classes along with <code>.widget-body</code> class would define the type of the widgets. 
+									</p>
+									<ul>
+									    <li><strong>HTML widgets</strong></li>
+									    <p><strong>HTML widgets</strong> are defualt widgets, they don't have any optional classes as below:</p>
+<pre>
+<div class="widget">
+<div class="widget-body">
+<img src="img/blog/author1.jpg" class="circular img-responsive pad-20" alt="image">
+
+<h5 class="text-center underlined allcaps">Ivana Rasima</h5>
+<p class="text-center mb-small"><!-- your content here --></p>
+<ul class="social-icons text-center">
+<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+<li><a href="#"><i class="fa fa-flickr"></i></a></li>
+<li><a href="#"><i class="fa fa-youtube"></i></a></li>
+<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+</ul>
+<hr/>
+</div>
+</div>
+</pre>
+									    <li><strong>Categories Widgets</strong></li>
+									    <p>You can have <strong>categories widgets</strong> by using <code>.widget_categories</code> class along with <code>.widget-body</code> class.</p>
+<pre>
+<div class="widget">
+	<h3 class="widget-title underlined">Categories</h3>
+	<div class="widget-body widget_categories">
+		<ul>
+			<li>
+				<a href="#">
+				<!-- your categories here --><span><!-- quantity --></span>
+				</a>
+			</li>
+				<li>
+				<a href="#">
+				<!-- your categories here --><span><!-- quantity --></span>
+				</a>
+			</li>
+			.
+			.
+			.
+
+			<li>
+				<a href="#">
+				<!-- your categories here --><span><!-- quantity --></span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
+</pre>
+									    <li><strong>Tags Widgets</strong></li>
+									    <p>by adding the class of <code>.widget_tag_cloud</code> to the div with <code>.widget-body</code> class you'll have <strong>tags widgets</strong>. as the sample shown below:
+									    </p>
+<pre>
+<div class="widget">
+	<h3 class="widget-title underlined">Tag Cloud</h3>
+	<div class="widget-body widget_tag_cloud">
+		<a href="#">News</a>
+		<a href="#">Design</a>
+		<a href="#">Photography</a>
+		<a href="#">Technology</a>
+		.
+		.
+		.
+
+		<a href="#">Bootstrap</a>
+	</div>
+</div>
+</pre>
+									    <li><strong>Latest Posts Widgets</strong></li>
+									    <p><strong>Recent posts widgets</strong> are determined by a div with a class of <code>.widget-recent-posts</code> along with <code>.widget-body</code> class:
+									    </p>
+<pre>
+<div class="widget">
+	<h3 class="widget-title underlined">Popular Posts</h3>     
+	
+	<div class="widget-body widget-recent-posts">
+    
+	    <div class="w-post">
+		    <div class="w-post-image">
+		    	<a href="blog-single.html"><img src="img/blog/b00-t.jpg" alt="image"></a>
+		    </div>
+		    <div class="w-post-content">
+			    <a href="blog-single.html">
+			    <span class="date">08 Feb , 2014</span>
+			    <br>
+			    <p>w-Post with a Featured Image</p>
+			    </a>
+		    </div>
+	    </div>
+
+	    <div class="w-post">
+		    <div class="w-post-image">
+		    	<a href="blog-single.html"><img src="img/blog/b03-t.jpg" alt="image"></a>
+		    </div>
+		    <div class="w-post-content">
+			    <a href="blog-single.html">
+			    <span class="date">08 Feb , 2014</span>
+			    <br>
+			    <p>w-Post with a Featured Image</p>
+			    </a>
+		    </div>
+	    </div>
+	    .
+	    .
+	    .
+
+	    <div class="w-post">
+		    <div class="w-post-image">
+		    	<a href="blog-single.html"><img src="img/blog/b02-t.jpg" alt="image"></a>
+		    </div>
+		    <div class="w-post-content">
+			    <a href="blog-single.html">
+			    <span class="date">08 Feb , 2014</span>
+			    <br>
+			    <p>Post with a Featured Image</p>
+			    </a>
+			</div>
+    	</div>
+
+    </div>
+</div>
+</pre>									    
+									    <li><strong>Gallery Widgets</strong></li>
+									    <p>Finaly we got <strong>gallery widget</strong>. just use <code>.gallery-widget</code> class along with <code>.widget-body</code> class to make it work.</p>
+<pre>
+<div class="widget">
+	<h3 class="widget-title underlined">Gallery widget</h3>
+	<div class="widget-body gallery-widget tj-lightbox-gallery">
+
+		<!--Gallery item-->
+		<a href="img/gallery/a1.jpg" class="lightbox-gallery-item gallery-item tj-hover-4">
+		<img src="img/gallery/thumbs/a1.jpg" class="img-fit" alt="">
+		<div class="tj-overlay">
+			<i class="fa fa-chevron-right overlay-icon"></i>
+		</div>
+		</a>
+		<!--/Gallery item-->
+
+		<!--Gallery item-->
+		<a href="img/gallery/a2.jpg" class="lightbox-gallery-item gallery-item tj-hover-4">
+		<img src="img/gallery/thumbs/a2.jpg" class="img-fit" alt="">
+		<div class="tj-overlay">
+			<i class="fa fa-chevron-right overlay-icon"></i>
+		</div>
+		</a>
+		<!--/Gallery item-->
+		.
+		.
+		.
+
+		<!--Gallery item-->
+		<a href="img/gallery/b9.jpg" class="lightbox-gallery-item gallery-item tj-hover-4">
+		<img src="img/gallery/thumbs/b9.jpg" class="img-fit" alt="">
+		<div class="tj-overlay">
+			<i class="fa fa-chevron-right overlay-icon"></i>
+		</div>
+		</a>
+		<!--/Gallery item-->
+
+	</div>
+</div>
+</pre>
+
+									</ul>
+								</div>
+
+
+
+								<div id="sh-slider">
+									<h2 class="lined">Simple slider</h2>
+									<p>A simple slider can be added using the following mark-up:</p>
+									<pre>
+<div class="tj-ms-slider ms-skin-toranj" data-autoheight="true" id="masterslider">
+    <div class="ms-slide">
+        <img src="../masterslider/blank.gif" data-src="img/home/01.jpg" alt="lorem ipsum dolor sit"/>
+    </div>
+    <div class="ms-slide">
+        <img src="../masterslider/blank.gif" data-src="img/home/02.jpg" alt="lorem ipsum dolor sit"/>    
+    </div>
+    .
+    .
+    .
+</div>
+									</pre>
+								</div>
+
+								
+							</div>
+							<!-- END shortcode -->
+
+
+
+
+							<!-- plugins -->
+							<!-- <div class="row mb-xlarge" id="plugins">
+								<h2 class="section-title double-title">
+									<span>owwwlab</span>Jquery Plugins
+								</h2>
+
+								
+								<div class="intro">
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+									quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+									consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+									cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+									proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+								</div>
+
+								
+								<div class="contents">
+									<h2 class="lined">Contents</h2>
+									<ul class="list-border list-iconed list-hover">
+									    <li><a href="#pl-vb"><i class="fa fa-arrow-right"></i>Video Background</a></li>
+									    <li><a href="#pl-dc"><i class="fa fa-arrow-right"></i>Double Carousel</a></li>
+									    <li><a href="#pl-ks"><i class="fa fa-arrow-right"></i>Kenburn Slider</a></li>
+									</ul>
+								</div>
+
+								<div id="pl-vb">
+									<h2 class="lined">Video Background</h2>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+									tempor incididunt ut labore et dolore magna aliqua.</p>
+								</div>
+
+								<div id="pl-dc">
+									<h2 class="lined">Double Carousel</h2>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+									tempor incididunt ut labore et dolore magna aliqua.</p>
+								</div>
+
+								<div id="pl-ks">
+									<h2 class="lined">Kenburn Slider</h2>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+									tempor incididunt ut labore et dolore magna aliqua.</p>
+								</div>
+
+								
+							</div> -->
+							<!-- END plugins -->
+
+
+
+							<!-- howto -->
+							<div class="row mb-xlarge" id="howto">
+								<h2 class="section-title double-title">
+									<span>Quick</span>HOW TOs
+								</h2>
+
+								<div>
+									<h3 class="lined">
+										When should I ask for support?
+						        	</h3>
+						        	<p>Any time, but make sure you have read and searched your question in this file first. We try our best to support our customers to fix bugs and answer questions carefully and be aware that we don't normally provide customizations.</p>
+						        </div>
+						        
+						        <div>
+						        	<h3 class="lined">
+						        		How can I appreciate your work?
+						        	</h3>
+						        	<p>If you found yourself satisfied, we appreciate your feedback and rate at Themeforest under your <a href="http://themeforest.net/downloads">Downloads</a> menu. Go there and rate the item we will be notified about your comments.</p>
+						        </div>
+						        
+						        <div>
+						        	<h3 class="lined">
+						        		How to change logo?
+						        	</h3>
+						        	<p>In order to change logo, you just need to replace your logo file with the current file name <code>logo.png</code> We recommend you to use at least a 300px by 300px image and make it transparent background.</p>
+						        </div>
+						        
+						        <div>
+						        	<h3 class="lined">
+						        		How to Setup contact form?
+						        	</h3>
+						        	<p>You need a webserver with email functionality and PHP support. Also you should change the email at <code>php/contact.php</code> file to receive the emails. We don't provide any spam protection since there are various methods, you can use one as you want and integrate it with the current contact form.</p>
+						        </div>
+						        
+						        <div>
+						        	<h3 class="lined">
+						        		What should I consider with Image sizes?
+						        	</h3>
+						        	<p>Image sizes play an important role to your website performance. We recommend to optimize your images and don't use extra large images. The theme is capable to handle your images very well and fits them to available areas.</p>
+						        </div>
+						        
+						        <div>
+						        	<h3 class="lined">
+						        		How to change theme preset color scheme?
+						        	</h3>
+						        	<p>You just need to add the skin css file to your base.css</p>
+						        </div>
+						        
+						        <div>
+						        	<h3 class="lined">
+						        		Where can I find css classes for a particular element to edit it?
+						        	</h3>
+						        	<p>We recommend using chrome developer tools. Learn to use basic inspections with chrome inspect element tool. There you can find which line of the css file is responsible for an specific part. Also there is a table of contents at the begining of the style.css file for convenience.</p>
+						        </div>
+						        
+						        <div>
+						        	<h3 class="lined">
+						        		How to set up RTL version?
+						        	</h3>
+						        	<p>
+						        		You should use HTML files inside the rtl folder. that's all. If you want to change the structure of folders make sure to change the css and js paths accordingly.
+						        	</p>
+						        </div>
+						        
+						        <div>
+						        	<h3 class="lined">
+						        		Can I make my own homepage structure?
+						        	</h3>
+						        	<p>Yes sure, it is possible to have a blog list or a portfolio list as your home page, be creative and make you own to fit your specific needs.</p>
+						        </div>
+						        
+						        <div>
+						        	<h3 class="lined">
+						        		Why comments are not working?
+						        	</h3>
+						        	<p>Because, comments are database driven features and they need a content management system to work with. We have just provided the design so you can integrate this with your own platform</p>
+						        </div>
+						        
+						        <div>
+						        	<h3 class="lined">
+						        		How to use blog? Is that supposed to work?
+						        	</h3>
+						        	<p>Like comments, Blog is also a database driven feature and you can't have a blog without any PHP or other programming languages managing and storing your content.</p>
+						        </div>
+						        
+						        <div>
+						        	<h3 class="lined">
+						        		Can I have Controls like play and pause on video backgrounds?
+						        	</h3>
+						        	<p>No, you can just set them to be Auto-play or Hover-play. They will loop by default.</p>
+						        </div>
+						        <div>
+						        	<h3 class="lined">
+						        		Is it possible to show menu by default?
+						        	</h3>
+						        	<p>Yes just add <code>.show-sidebar</code> to <code>body</code> tag</p>
+						        </div>
+						        
+						        <div>
+						        	<h3 class="lined">
+						        		How to use the dark sidebar as you did on you demo?
+						        	</h3>
+						        	<p>Just add <code>.dark-sidebar</code> to <code>body</code> tag and make sure to include the <code>css/styles/dark-sidebar.css</code> file to your pages</p>
+						        </div>
+
+						        <div>
+						        	<h3 class="lined">
+						        		How to customize grid portfolio and gallery items dimension?
+						        	</h3>
+						        	<p>Toranj has a very flexible grid system. Let's start from column base width. Currently by default we have 4 different number in different sizes:
+						        	</p>
+						        	<ul>
+						        	    <li>screen size larger than 1200     (lg-cols)	   - 4 column</li>
+						        	    <li>screen size between 800 and 1200 (md-cols)     - 3 column</li>
+						        	    <li>screen size between 500 and 800  (sm-cols)     - 2 column</li>
+						        	    <li>screen size between 300 and 500  (xs-cols)     - 1 column</li>
+						        	</ul>
+
+						        	<h4>So what if I want different column number?</h4>
+						        	<p>You can overwrite these with specifying columns number with <code>lg-cols</code>, <code>md-cols</code>, <code>sm-cols</code> and <code>xs-cols</code> attribute which must be assign to grid system wrapper.
+						        	</p>
+						        	<p>Here is an example which has 5 column in large desktop and 4 in medium:</p>
+						        	
+<pre>
+<div class="grid-portfolio" lg-cols="5" md-cols="4">
+	<!-- portfolio Item -->		
+	<div class="gp-item tj-hover-1">
+		
+	</div>
+	<!-- /portfolio Item -->
+	...
+</div>
+</pre>
+						            <h4>So what about items different size?</h4>
+						            <p>Past section described how the base column width will be determine but you can additionally define each item width with <code>data-width-ratio</code> attribute. it should be a number like 2 or 3 or 0.5 which will be multiply in base width and generate each item width.</p>
+						            <p>Here is an example:</p>
+<pre>
+<div class="grid-portfolio" lg-cols="5" md-cols="4">
+	<!-- portfolio Item -->		
+	<div class="gp-item" data-width-ratio="2">
+		
+	</div>
+	<!-- /portfolio Item -->
+	<!-- portfolio Item -->		
+	<div class="gp-item">
+		
+	</div>
+	<!-- /portfolio Item -->
+	...
+</div>
+</pre>
+						        	<p>first item has double size and second has base width.</p>
+						        	<h4>So what about item heights?</h4>
+						        	<p>Our logic is based on width and the height is depende on image ratio so you must tweak that to get your desired layout</p>
+
+						        	<h4>Update since version 2.0</h4>
+						        	<p>Since version 2.0 you have the ability to set one item as the grid sizer. It is useful when most of your images has same ratio. If you set the grid-sizer element the width and height off all other images will be rounded to a ratio of that grid sizer width and height. This will eliminate any possible miss positioning and will give you ability to have a prefect complex grid</p>
+
+						        	<p>In order to use grid sizer you need to change the grid markups. Here is an example:</p>
+<pre>
+	<!-- portfolio wrapper -->	
+	<div class="grid-portfolio same-ratio-items">
+		//Portfolio items
+		...
+
+		<!-- portfolio Item -->		
+		<div class="gp-item tj-hover-1 web-design grid-sizer">...</div>
+	</div>
+</pre>
+
+<p>Notice that we have added <code>.same-ratio-items</code> class to wrapper and also <code>.grid-sizer</code> to the one of items which has the base size</p>
+
+
+						        </div>
+
+
+								
+							</div>
+							 <div>
+					        	<h3 class="lined">
+					        		How to change google map address?
+					        	</h3>
+					        	<p>Since verison 2.0 you can have multiple google maps. To set the address simply include it in <code>data-address</code> attribute of map wrapper element. Here is an example:</p>
+<pre>
+	<div id="gmap" data-address="Footscray VIC 3011 Australia"></div>
+</pre>
+<p><strong>Notice:</strong> You can also have a google map on elements which has class <code>.gmap</code></p>
+					        </div>
+					         <div>
+					        	<h3 class="lined">
+					        		How to get video backgrounds work with touch devices?
+					        	</h3>
+					        	<p>iPhone, iPad and some other touch devices won't allow the video background to play automatically so the video background plugin replace video with a simple background image. You can link the this image to your video file by wrapping the videobg element inside an anchor with class <code>videobg-fallback</code>. This link only works in touch devices. An example would be like this:</p>
+<pre>
+	<a href="assets/video/01/01.mp4" class="videobg-fallback">
+		<div class="owl-videobg autoplay dark-overlay" data-src="assets/video/01/01.mp4"></div>
+	</a>
+</pre>
+					        </div>
+							<!-- END howto -->
+
+
+							<!-- externals -->
+							<div class="row mb-xlarge" id="externals">
+								<h2 class="section-title double-title">
+									<span>External</span>Libraries
+								</h2>
+
+								<!-- intor -->
+								<div class="intro">
+									<p>We have carefully choose and used best free and premium third party libraries for you. So, please make sure you have taken a look at them and read their documentations accordingly.</p>
+									<p>You can find the documentations and source codes for MasterSlider inside your package, your licence allows you to use it within our theme only.</p>
+									<p>We have also used <a href="http://getbootstrap.com/">Bootstrap</a> css framework and <a href="http://fontawesome.io/">FontAwesome</a> libraries.</p>
+								</div>
+
+								
+							</div>
+							<!-- END externals -->
+
+
+
+							<!-- credits -->
+							<div class="row mb-xlarge" id="credits">
+								<h2 class="section-title double-title">
+									Credits
+								</h2>
+
+								<!-- intor -->
+								<div class="intro">
+
+									<h4 class="bordered">Special Thanks</h4>
+									<p>We want to thank <strong><a href="http://www.philippgrein.com/">Philipp Grein</a></strong> who provided invaluable quality photos of his works. You can find him at <a href="https://www.facebook.com/greinphilipp">his Facebook</a> page.</p>
+									<p>&nbsp;</p>
+									<h4 class="bordered">3rd party Libraries</h4>
+									<ul class="list-unstyled">
+									    <li><a href="http://getbootstrap.com/">Bootstrap</a></li>
+									    <li><a href="http://jquery.com/">jQuery</a></li>
+									    <li><a href="https://github.com/browserstate/history.js">History.js</a></li>
+									    <li><a href="https://github.com/protonet/jquery.inview">jQuery inview plugin</a></li>
+									    <li><a href="http://dimsemenov.com/plugins/magnific-popup/">jQuery Magnific Popup</a></li>
+									    <li><a href="http://isotope.metafizzy.co/">jQuery Isotope</a></li>
+									    <li><a href="https://github.com/inuyaksa/jquery.nicescroll">jQuery NiceScroll</a></li>
+									    <li><a href="http://www.greensock.com/tweenmax/">TweenMax</a></li>
+									    <li><a href="http://fortawesome.github.io/Font-Awesome/">FontAwesome</a></li>
+									</ul>
+									<p>&nbsp;</p>
+									<h4 class="bordered">Videos</h4>
+									<p>Videos are under the Attribution license (CC BY 3.0) Provided by <a href="http://mazwai.com/">http://mazwai.com/</a>.</p>
+									<p>&nbsp;</p>
+									<h4 class="bordered">Photos</h4>
+									<ul class="list-unstyled">
+									    <li><a href="https://www.flickr.com/photos/martinaphotography/">martinak15</a></li>
+									    <li><a href="https://www.flickr.com/photos/chriszerbes/">Chris Zerbes</a></li>
+									    <li><a href="https://www.flickr.com/photos/ag2r/">Ángelo González</a></li>
+									    <li><a href="https://www.flickr.com/photos/markjsebastian/">Mark Sebastian</a></li>
+									    <li><a href="https://www.flickr.com/photos/qsimple">Qsimple</a></li>
+									    <li><a href="https://www.flickr.com/photos/VladJanuary">VladJanuary</a></li>
+									    <li><a href="https://www.flickr.com/photos/pukich/">Vesna Tiricovska</a></li>
+									    <li><a href="https://www.flickr.com/photos/nhojleunamme">Jonathan Emmanuel Flores Tarello</a></li>
+									</ul>
+
+									
+								</div>
+
+
+								
+							</div>
+							<!-- END credits -->
+
+
+
+							<!-- update -->
+							<div class="row mb-xlarge" id="update">
+								<h2 class="section-title double-title">
+									Updating
+								</h2>
+
+								<strong>
+									<p>We highly recommend you do not modify style.css file and create a new file and override default styles. We do out best to keep it easy to update but it will eventually take time as this is a HTML template. </p>
+								</strong>
+								<div class="intro">
+									<h2>Update from version 2.0 to version 2.1</h3>
+									<h4 class="bordered">CSS Change</h4>
+								     <strong>assets/css/style.css</strong>
+
+								     <p>Please check the provided <a href="updates/style-changes-v2.0-v2.1.htm">file difference report </a>which you can use to see exact changed line between version 2.0 and 2.1.</p>
+
+								     <h4 class="bordered">JavaScript files</h4>
+								     <p>Replace "assets/js/custom.js" and "assets/js/custom-rtl.js" files with new ones. If you have made changes in our custom.js file please check the  <a href="updates/js-v2.0-v2.1.htm">JavaScript file difference report </a> to know the exact changed lines.</p>
+
+								     <h4 class="bordered">PHP files</h4>
+								     <p>Replace "php/contact.php" file with new ones and also please do not forget to set your email in new file.</p>
+
+
+								</div>
+								<!-- intro -->
+								<div class="intro">
+									<h2>Update from version 1.4 to version 2.0</h3>	
+									<h4 class="bordered">HTML Changes</h4>
+									<strong>blog-grid.html</strong>
+
+									<p>This change is about touch scroll problem in blog-grid.html file. Please open this file and search for:</p>
+<pre>
+<div id="main-content" class="blog-grid dark-template"></div>
+</pre>
+									 <p>You need to put all content of this <code>div</code> tag inside a <code>div</code> with class <code>"page-wrapper" </code>. So it should be like this:</p>
+<pre>
+<div id="main-content" class="blog-grid dark-template">
+     <div class="page-wrapper">
+           ...//Contents
+     </div>
+</div>
+</pre>
+
+								     <strong>portfolio-grid.html</strong>
+								     <p>We have added grid sizer. Please refer to portfolio section for information regarding this change.
+</p>
+								     <strong>Contact us pages.</strong>
+								     <p>The google map address is no longer in custom.js file and has been added as a property of google map element. Please refer to google map section for more information </p>
+
+								     <strong>page-team.html</strong>
+
+								     <h4 class="bordered">CSS change</h4>
+								     <strong>assets/css/style.css</strong>
+								     
+								     <p>There are some added styles at the end of this file which you should add them to your own file as well. We provided a <a href="updates/style-changes-v1.4-v2.0.htm">file difference report </a>which you can use to see exact changed line between version 1.4 and 2.0.</p>
+
+								     <h4 class="bordered">JavaScript files</h4>
+								     Please replace "assets/js/custom.js", "assets/js/custom-rtl.js" and "assets/js/jquery.owwwwlab-kenburns.js" file with new ones. We do not provide specific changes because one mistake will lead to error and totally break the site but if you modified custom.js file in your project please contact us with email for information regarding the changed functions. Thanks
+								</div>
+							</div>
+							<!-- update -->
+
+
+							
+
+
+						</div>
+						<!-- End contents -->
+
+					</div>
+					
+
+					<hr/>
+					<p id="back-top">
+						<a href="top"><i class="fa fa-arrow-up"></i></a>
+					</p>
+				</div>
+			</div>
+		</div>
+
+		
+		
+		<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+		<script src="js/holder.js"></script>
+    	<script src="js/prettify.js"></script>
+    	<script src="js/scripts.js"></script>
+	
+    </body>
+</html>

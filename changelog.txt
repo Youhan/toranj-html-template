@@ -1,0 +1,62 @@
+<h4> Changelog</h4>
+<h5>version 2.1 --06 October 14</h5>
+
+<pre>
+-Fixed scroll issue in IOS 8
+-Fixed sidebar width in IOS 8
+-Fixed gallery thumbnails loading issue
+-Fixed contact.php variables
+-Fixed double carousel issue in IE
+-Added lightbox close on background click
+</pre>
+<h5>version 2.0 --10 August 14</h5>
+
+<pre>
+-Added play button to full screen galleries
+-Added timer bar to full screen galleries
+-Added grid-sizer to grid layouts
+-Added multiple instance of google map
+-Added option for initial zoom in google map
+-Enhanced grid filters in mobile and touch devices
+-Added mouse wheel, keyboard, touch swipe and bullet control to double carousel
+-Changed functionality and layout of double carousel
+-Fixed touch scroll issue in blog-grid.html
+-Fixed re-layout issue in ajax portfolios
+-Fixed RTL side-bar bug in firefox
+-Updated MasterSlider to latest version
+</pre>
+
+</pre>
+<h5>version 1.4 --19 July 14</h5>
+<pre>
+-Added all demo files in package
+-Added full screen video gallery page (gallery-full-3.html)
+-Added blog list minimal page (blog-minimal.html)
+-Added portfolio item regular page(portfolio-item-regular.html)
+-Added class "touch-device" to body in devices with touch support
+-Added simple linking fallback for video backgrounds in touch devices
+-Updated Master slider to latest version and included it's documentation
+-Documentation updated
+-Fixed minor bugs
+</pre>
+
+<h5>version 1.3 --11 July 14</h5>
+<pre>
+-Added dark sidebar skin ( css and markup change)
+-Added complex grid, each item can get different sizes respecting to column width of grid ( see portfolio-grid.html file ) (js and markup change )
+-Documentation file updated
+-Added perfect padding and no-padding variations for grid items (css change)
+-Fixed minor bug on full-screen gallery thumbnails ( js change )
+</pre>
+
+<h5>version 1.2 --9 July 14</h5>
+<pre>
+-Added functionality to show sidebar and menu by default(just add class "show-sidebar" to body tag)
+-Fixed some minor bugs
+</pre>
+
+<h5>version 1.1 --8 July 14</h5>
+<pre>
+-initial release 
+</pre>
+
